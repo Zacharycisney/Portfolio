@@ -175,15 +175,18 @@
             let scrollPercent = (scrollPos / scrollHeight) * 100;
             progressBar.style.width = scrollPercent + '%';
 
-            projects.forEach((project) => {
+            projects.forEach((project, index) => {
                 let projectPos = project.getBoundingClientRect().top;
-                if (projectPos < window.innerHeight && projectPos > 0) {
+                if (projectPos < window.innerHeight && projectPos > -project.clientHeight / 2) {
                     project.classList.add('active');
                 } else {
                     project.classList.remove('active');
                 }
             });
         });
+
+        // Trigger scroll event on load to ensure the first project is shown if in view
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
