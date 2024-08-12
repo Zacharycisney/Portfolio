@@ -1,1 +1,137 @@
-<h1>Hellow!<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .project {
+            min-height: 100vh;
+            padding: 100px 50px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .project.active {
+            opacity: 1;
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #17a2b8;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            z-index: 1000;
+        }
+        .code-panel {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .tab-content {
+            background-color: #212529;
+            padding: 20px;
+            border: 1px solid #495057;
+            border-top: none;
+            color: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #495057;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- Project 1 -->
+    <div class="project" id="project1">
+        <h2>Project 1</h2>
+        <img src="screenshot1.png" alt="Project 1 Screenshot">
+        <div class="code-panel">
+            <ul class="nav nav-tabs" id="codeTabs1" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active text-light bg-dark" id="file1-tab" data-bs-toggle="tab" href="#file1" role="tab">File1.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light bg-dark" id="file2-tab" data-bs-toggle="tab" href="#file2" role="tab">File2.css</a>
+                </li>
+                <!-- Add more tabs as needed -->
+            </ul>
+            <div class="tab-content" id="codeTabContent1">
+                <div class="tab-pane fade show active" id="file1" role="tabpanel">
+                    <pre>// Code for File1.js...</pre>
+                </div>
+                <div class="tab-pane fade" id="file2" role="tabpanel">
+                    <pre>/* Code for File2.css... */</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project" id="project2">
+        <h2>Project 2</h2>
+        <img src="screenshot2.png" alt="Project 2 Screenshot">
+        <div class="code-panel">
+            <ul class="nav nav-tabs" id="codeTabs2" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active text-light bg-dark" id="file3-tab" data-bs-toggle="tab" href="#file3" role="tab">File1.js</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File2.css</a>
+                </li>
+                <!-- Add more tabs as needed -->
+            </ul>
+            <div class="tab-content" id="codeTabContent2">
+                <div class="tab-pane fade show active" id="file3" role="tabpanel">
+                    <pre>// Code for File1.js...</pre>
+                </div>
+                <div class="tab-pane fade" id="file4" role="tabpanel">
+                    <pre>/* Code for File2.css... */</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more projects as needed -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle scroll effects
+        const projects = document.querySelectorAll('.project');
+        const progressBar = document.getElementById('progress-bar');
+
+        window.addEventListener('scroll', () => {
+            let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollPercent = (scrollPos / scrollHeight) * 100;
+            progressBar.style.width = scrollPercent + '%';
+
+            projects.forEach((project) => {
+                let projectPos = project.getBoundingClientRect().top;
+                if (projectPos < window.innerHeight && projectPos > 0) {
+                    project.classList.add('active');
+                } else {
+                    project.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
