@@ -11,6 +11,27 @@
             background-color: #121212;
             color: #ffffff;
         }
+        .welcome-message, .scroll-prompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            z-index: 1000;
+        }
+        .welcome-message.fade-out {
+            opacity: 0;
+        }
+        .scroll-prompt {
+            opacity: 0;
+            font-size: 1.25rem;
+            transition: opacity 1s ease-in-out;
+        }
+        .scroll-prompt.show {
+            opacity: 1;
+        }
         .project {
             min-height: 100vh;
             padding: 100px 50px;
@@ -55,6 +76,16 @@
     </style>
 </head>
 <body>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message" id="welcome-message">
+        <h1>Welcome to My Portfolio</h1>
+    </div>
+
+    <!-- Scroll Prompt -->
+    <div class="scroll-prompt" id="scroll-prompt">
+        <p>Scroll to see my projects</p>
+    </div>
 
     <!-- Progress Bar -->
     <div class="progress-bar" id="progress-bar"></div>
@@ -113,6 +144,18 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Welcome message fade-out and scroll prompt
+        const welcomeMessage = document.getElementById('welcome-message');
+        const scrollPrompt = document.getElementById('scroll-prompt');
+
+        setTimeout(() => {
+            welcomeMessage.classList.add('fade-out');
+            setTimeout(() => {
+                welcomeMessage.style.display = 'none';
+                scrollPrompt.classList.add('show');
+            }, 1000); // 1 second for the fade-out effect
+        }, 2000); // 2 seconds before fade-out
+
         // Handle scroll effects
         const projects = document.querySelectorAll('.project');
         const progressBar = document.getElementById('progress-bar');
