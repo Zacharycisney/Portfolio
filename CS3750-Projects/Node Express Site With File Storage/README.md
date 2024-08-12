@@ -1,0 +1,1 @@
+This is a program that stores users favorite food in txt file. The saved responses can be displayed or filtered later on seperate pages.
