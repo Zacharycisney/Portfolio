@@ -11,6 +11,21 @@
             background-color: #121212;
             color: #ffffff;
         }
+        .navbar {
+            transition: height 0.3s ease-in-out;
+            background-color: #343a40;
+            height: 60px; /* Initial height */
+        }
+        .navbar:hover {
+            height: 120px; /* Height on hover */
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #17a2b8;
+        }
         .welcome-message, .scroll-prompt {
             position: fixed;
             top: 50%;
@@ -76,6 +91,27 @@
     </style>
 </head>
 <body>
+
+    <!-- Menu Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project1">Project 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project2">Project 2</a>
+                    </li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Welcome Message -->
     <div class="welcome-message" id="welcome-message">
@@ -144,23 +180,22 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Welcome message fade-out and scroll prompt
-        const welcomeMessage = document.getElementById('welcome-message');
-        const scrollPrompt = document.getElementById('scroll-prompt');
-
-        setTimeout(() => {
-            welcomeMessage.classList.add('fade-out');
+        // Welcome and Scroll Prompt Fade Out
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                welcomeMessage.style.display = 'none';
-                scrollPrompt.classList.add('show');
+                document.getElementById('welcome-message').classList.add('fade-out');
                 setTimeout(() => {
-                    scrollPrompt.classList.add('fade-out');
+                    document.getElementById('welcome-message').style.display = 'none';
+                    document.getElementById('scroll-prompt').classList.add('show');
                     setTimeout(() => {
-                        scrollPrompt.style.display = 'none';
-                    }, 1000); // 1 second for the fade-out effect of the scroll prompt
-                }, 2000); // 2 seconds before fading out the scroll prompt
-            }, 1000); // 1 second for the fade-out effect of the welcome message
-        }, 2000); // 2 seconds before fading out the welcome message
+                        document.getElementById('scroll-prompt').classList.add('fade-out');
+                        setTimeout(() => {
+                            document.getElementById('scroll-prompt').style.display = 'none';
+                        }, 1000); // Give time for fade-out animation to complete
+                    }, 2000); // Display scroll prompt for 2 seconds
+                }, 1000); // Wait for fade-out animation to complete
+            }, 2000); // Display welcome message for 2 seconds
+        });
 
         // Handle scroll effects
         const projects = document.querySelectorAll('.project');
