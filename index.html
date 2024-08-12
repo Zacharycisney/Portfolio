@@ -166,35 +166,34 @@
         }, 2000); // 2 seconds before fading out the welcome message
 
         // Handle scroll effects
-const projects = document.querySelectorAll('.project');
-const progressBar = document.getElementById('progress-bar');
+        const projects = document.querySelectorAll('.project');
+        const progressBar = document.getElementById('progress-bar');
 
-window.addEventListener('scroll', () => {
-    let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollPercent = (scrollPos / scrollHeight) * 100;
-    progressBar.style.width = scrollPercent + '%';
+        window.addEventListener('scroll', () => {
+            let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollPercent = (scrollPos / scrollHeight) * 100;
+            progressBar.style.width = scrollPercent + '%';
 
-    const viewportHeight = window.innerHeight;
+            const viewportHeight = window.innerHeight;
 
-    projects.forEach((project) => {
-        let projectTop = project.getBoundingClientRect().top;
-        let projectBottom = project.getBoundingClientRect().bottom;
-        let fadeInStart = viewportHeight * 0.3; // Start fading in when 30% into viewport
-        let fadeOutEnd = viewportHeight * 0.7; // Start fading out when 70% into viewport
+            projects.forEach((project) => {
+                let projectTop = project.getBoundingClientRect().top;
+                let projectBottom = project.getBoundingClientRect().bottom;
+                let fadeInStart = viewportHeight * 0.3; // Adjust start of fade-in (30%)
+                let fadeOutEnd = viewportHeight * 0.7; // Adjust end of fade-out (70%)
 
-        // Check if the project is within the viewport for the fade-in effect
-        if (projectTop < fadeInStart && projectBottom > fadeInStart) {
-            project.classList.add('active');
-        } else if (projectTop > viewportHeight || projectBottom < 0) {
-            project.classList.remove('active');
-        }
-    });
-});
+                // Update these thresholds as needed
+                if (projectTop < fadeInStart && projectBottom > fadeOutEnd) {
+                    project.classList.add('active');
+                } else {
+                    project.classList.remove('active');
+                }
+            });
+        });
 
-// Trigger scroll event on load to ensure the first project is shown if in view
-window.dispatchEvent(new Event('scroll'));
-
+        // Trigger scroll event on load to ensure the first project is shown if in view
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
