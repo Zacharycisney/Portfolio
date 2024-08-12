@@ -178,8 +178,13 @@
             const viewportHeight = window.innerHeight;
 
             projects.forEach((project) => {
-                let projectPos = project.getBoundingClientRect().top;
-                if (projectPos >= viewportHeight * 0.4 && projectPos <= viewportHeight * 0.6) {
+                let projectTop = project.getBoundingClientRect().top;
+                let projectBottom = project.getBoundingClientRect().bottom;
+                let fadeInStart = viewportHeight * 0.3; // Adjust start of fade-in (30%)
+                let fadeOutEnd = viewportHeight * 0.7; // Adjust end of fade-out (70%)
+
+                // Update these thresholds as needed
+                if (projectTop < fadeInStart && projectBottom > fadeOutEnd) {
                     project.classList.add('active');
                 } else {
                     project.classList.remove('active');
@@ -192,4 +197,3 @@
     </script>
 </body>
 </html>
-
