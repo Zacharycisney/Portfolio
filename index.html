@@ -36,10 +36,12 @@
             min-height: 100vh;
             padding: 100px 50px;
             opacity: 0;
+            visibility: hidden; /* Initially hide the projects */
             transition: opacity 1.5s ease-in-out;
         }
         .project.active {
             opacity: 1;
+            visibility: visible; /* Show projects when active */
         }
         .progress-bar {
             height: 5px;
@@ -160,6 +162,12 @@
                     scrollPrompt.classList.add('fade-out');
                     setTimeout(() => {
                         scrollPrompt.style.display = 'none';
+                        // Show the projects after scroll prompt fades out
+                        document.querySelectorAll('.project').forEach(project => {
+                            project.style.visibility = 'visible'; // Make projects visible
+                            // Trigger a scroll event to ensure projects are properly shown
+                            window.dispatchEvent(new Event('scroll'));
+                        });
                     }, 1500); // 1.5 seconds for the fade-out effect of the scroll prompt
                 }, 2000); // 2 seconds before fading out the scroll prompt
             }, 1500); // 1.5 seconds for the fade-out effect of the welcome message
@@ -180,11 +188,11 @@
             projects.forEach((project) => {
                 let projectTop = project.getBoundingClientRect().top;
                 let projectBottom = project.getBoundingClientRect().bottom;
-                let fadeInStart = viewportHeight * 0.3; // Adjust start of fade-in (30%)
-                let fadeOutEnd = viewportHeight * 0.6; // Adjust end of fade-out (70%)
+                let fadeInStart = viewportHeight * 0.3; // When 30% of the viewport height
+                let fadeOutEnd = viewportHeight * 0.7; // When 70% of the viewport height
 
-                // Update these thresholds as needed
-                if (projectTop < fadeInStart && projectBottom > fadeOutEnd) {
+                // Fade in if the project is partially within the viewport
+                if (projectTop < fadeOutEnd && projectBottom > fadeInStart) {
                     project.classList.add('active');
                 } else {
                     project.classList.remove('active');
