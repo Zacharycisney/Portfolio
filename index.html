@@ -21,7 +21,7 @@
             transition: opacity 1s ease-in-out;
             z-index: 1000;
         }
-        .welcome-message.fade-out {
+        .welcome-message.fade-out, .scroll-prompt.fade-out {
             opacity: 0;
         }
         .scroll-prompt {
@@ -153,8 +153,14 @@
             setTimeout(() => {
                 welcomeMessage.style.display = 'none';
                 scrollPrompt.classList.add('show');
-            }, 1000); // 1 second for the fade-out effect
-        }, 2000); // 2 seconds before fade-out
+                setTimeout(() => {
+                    scrollPrompt.classList.add('fade-out');
+                    setTimeout(() => {
+                        scrollPrompt.style.display = 'none';
+                    }, 1000); // 1 second for the fade-out effect of the scroll prompt
+                }, 2000); // 2 seconds before fading out the scroll prompt
+            }, 1000); // 1 second for the fade-out effect of the welcome message
+        }, 2000); // 2 seconds before fading out the welcome message
 
         // Handle scroll effects
         const projects = document.querySelectorAll('.project');
