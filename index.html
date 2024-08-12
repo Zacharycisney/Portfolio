@@ -175,9 +175,11 @@
             let scrollPercent = (scrollPos / scrollHeight) * 100;
             progressBar.style.width = scrollPercent + '%';
 
-            projects.forEach((project, index) => {
+            const viewportHeight = window.innerHeight;
+
+            projects.forEach((project) => {
                 let projectPos = project.getBoundingClientRect().top;
-                if (projectPos < window.innerHeight && projectPos > -project.clientHeight / 2) {
+                if (projectPos >= viewportHeight * 0.4 && projectPos <= viewportHeight * 0.6) {
                     project.classList.add('active');
                 } else {
                     project.classList.remove('active');
@@ -190,3 +192,4 @@
     </script>
 </body>
 </html>
+
