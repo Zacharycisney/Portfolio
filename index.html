@@ -41,7 +41,7 @@
         }
         .project.active {
             opacity: 1;
-            visibility: visible; /* Show projects when active */
+            visibility: hidden; /* Show projects when active */
         }
         .progress-bar {
             height: 5px;
@@ -147,12 +147,13 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        
+
     let canShowProjects = false; // Flag to control when projects can be shown
 
     // Welcome message fade-out and scroll prompt
     const welcomeMessage = document.getElementById('welcome-message');
     const scrollPrompt = document.getElementById('scroll-prompt');
+    
 
     // Handle the welcome message fade-out
     setTimeout(() => {
