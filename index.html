@@ -5,94 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-       body {
-            position: relative;
-            background-color: #121212;
-            color: #ffffff;
-        }
-
-        .welcome-message, .scroll-prompt {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            opacity: 1;
-            transition: opacity 1.5s ease-in-out;
-            z-index: 1000;
-        }
-
-        .welcome-message.fade-out, .scroll-prompt.fade-out {
-            opacity: 0;
-        }
-
-        .scroll-prompt {
-            opacity: 0;
-            font-size: 1.25rem;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .scroll-prompt.show {
-            opacity: 1;
-        }
-
-        .project {
-            min-height: 100vh;
-            padding: 100px 50px;
-            opacity: 0;
-            visibility: hidden; /* Hide projects by default */
-            transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
-        }
-
-        /* Ensure projects are visible only after .show-projects class is added to body */
-        body.show-projects .project {
-            visibility: visible;
-        }
-
-        body.show-projects .project.active {
-            opacity: 1;
-        }
-
-        .progress-bar {
-            height: 5px;
-            background-color: #17a2b8;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            z-index: 1000;
-        }
-
-        .code-panel {
-            background-color: #343a40;
-            color: #f8f9fa;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .tab-content {
-            background-color: #212529;
-            padding: 20px;
-            border: 1px solid #495057;
-            border-top: none;
-            color: #f8f9fa;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #495057;
-            border-radius: 5px;
-        }
-
-        h2 {
-            color: #f8f9fa;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Welcome Message -->
