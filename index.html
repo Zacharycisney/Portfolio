@@ -6,11 +6,12 @@
     <title>Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+       body {
             position: relative;
             background-color: #121212;
             color: #ffffff;
         }
+
         .welcome-message, .scroll-prompt {
             position: fixed;
             top: 50%;
@@ -21,28 +22,38 @@
             transition: opacity 1.5s ease-in-out;
             z-index: 1000;
         }
+
         .welcome-message.fade-out, .scroll-prompt.fade-out {
             opacity: 0;
         }
+
         .scroll-prompt {
             opacity: 0;
             font-size: 1.25rem;
             transition: opacity 1.5s ease-in-out;
         }
+
         .scroll-prompt.show {
             opacity: 1;
         }
+
         .project {
             min-height: 100vh;
             padding: 100px 50px;
             opacity: 0;
-            visibility: hidden; /* Initially hide the projects */
-            transition: opacity 1.5s ease-in-out;
+            visibility: hidden; /* Hide projects by default */
+            transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
         }
-        .project.active {
+
+        /* Ensure projects are visible only after .show-projects class is added to body */
+        body.show-projects .project {
+            visibility: visible;
+        }
+
+        body.show-projects .project.active {
             opacity: 1;
-            visibility: hidden; /* Show projects when active */
         }
+
         .progress-bar {
             height: 5px;
             background-color: #17a2b8;
@@ -52,6 +63,7 @@
             width: 0%;
             z-index: 1000;
         }
+
         .code-panel {
             background-color: #343a40;
             color: #f8f9fa;
@@ -59,6 +71,7 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+
         .tab-content {
             background-color: #212529;
             padding: 20px;
@@ -66,15 +79,18 @@
             border-top: none;
             color: #f8f9fa;
         }
+
         img {
             max-width: 100%;
             height: auto;
             border: 1px solid #495057;
             border-radius: 5px;
         }
+
         h2 {
             color: #f8f9fa;
         }
+
     </style>
 </head>
 <body>
@@ -148,12 +164,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
 
-    let canShowProjects = false; // Flag to control when projects can be shown
-
     // Welcome message fade-out and scroll prompt
     const welcomeMessage = document.getElementById('welcome-message');
     const scrollPrompt = document.getElementById('scroll-prompt');
-    
 
     // Handle the welcome message fade-out
     setTimeout(() => {
@@ -167,7 +180,7 @@
                 scrollPrompt.classList.add('fade-out');
                 setTimeout(() => {
                     scrollPrompt.style.display = 'none';
-                    canShowProjects = true; // Allow projects to be shown on scroll
+                    document.body.classList.add('show-projects'); // Add the class to show projects
                 }, 1500); // 1.5 seconds for the fade-out effect of the scroll prompt
             }, 2000); // 2 seconds before fading out the scroll prompt
         }, 1500); // 1.5 seconds for the fade-out effect of the welcome message
@@ -183,7 +196,7 @@
         let scrollPercent = (scrollPos / scrollHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
 
-        if (!canShowProjects) return; // Prevent showing projects before scroll prompt fades out
+        if (!document.body.classList.contains('show-projects')) return; // Skip showing projects if the class is not added
 
         const viewportHeight = window.innerHeight;
 
@@ -204,10 +217,9 @@
 
     // Trigger scroll event on load to ensure the first project is shown if in view
     window.addEventListener('load', () => {
-        if (canShowProjects) {
-            window.dispatchEvent(new Event('scroll'));
-        }
+        window.dispatchEvent(new Event('scroll'));
     });
+
 </script>
 
     </script>
