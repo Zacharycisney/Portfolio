@@ -37,10 +37,7 @@ body {
      transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
  }
 
- .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+
 
  /* Ensure projects are visible only after .show-projects class is added to body */
  body.show-projects .project {
@@ -68,6 +65,11 @@ body {
      border-radius: 5px;
      margin-top: 20px;
  }
+
+.code-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
 
  .tab-content {
      background-color: #212529;
