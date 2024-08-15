@@ -1,9 +1,10 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     position: relative;
     background-color: #121212;
     color: #ffffff;
 }
+
 
 .welcome-message, .scroll-prompt {
     position: fixed;
@@ -31,9 +32,15 @@ body {
 }
 
 .project {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding: 100px 50px;
-    opacity: 0;
+
     visibility: hidden; /* Hide projects by default */
     transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
 }
@@ -93,3 +100,73 @@ a {
     text-decoration: none;  /* Remove underline from all links */
     color: inherit; 
 }
+
+/*-------------------------------------- Project Summary ---------------------------------------*/
+.project-summary-container {
+    max-width: 1100px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
+.project-header h1 {
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+/* Formatting */
+.project-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Right Side Description */
+.program-description {
+    width: 65%;
+    padding-right: 20px;
+}
+
+.program-description h2 {
+    color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.program-description p {
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+
+/* Left Side Image/Key-takeaways*/
+.project-details {
+    width: 35%;
+    text-align: left;
+}
+
+.project-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #495057;
+}
+
+/* Key Take Aways */
+.project-details h3 {
+    color: #f8f9fa;
+    margin-bottom: 10px;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #dcdcdc;
+}
+
+.project-details ul li {
+    margin-bottom: 10px;
+}
+
