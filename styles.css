@@ -1,11 +1,11 @@
 body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
     background-color: #121212;
     color: #ffffff;
 }
 
-.welcome-message,
-.scroll-prompt {
+.welcome-message, .scroll-prompt {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -16,8 +16,7 @@ body {
     z-index: 1000;
 }
 
-.welcome-message.fade-out,
-.scroll-prompt.fade-out {
+.welcome-message.fade-out, .scroll-prompt.fade-out {
     opacity: 0;
 }
 
@@ -31,19 +30,16 @@ body {
     opacity: 1;
 }
 
-.project .menu{
+.project {
     min-height: 100vh;
     padding: 100px 50px;
     opacity: 0;
-    visibility: hidden;
-    /* Hide projects by default */
+    visibility: hidden; /* Hide projects by default */
     transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
 }
 
-
-
 /* Ensure projects are visible only after .show-projects class is added to body */
-body.show-projects .project .menu{
+body.show-projects .project {
     visibility: visible;
 }
 
@@ -91,4 +87,9 @@ img {
 
 h2 {
     color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;  /* Remove underline from all links */
+    color: inherit; 
 }
