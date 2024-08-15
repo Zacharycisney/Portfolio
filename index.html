@@ -23,18 +23,8 @@
     <!-- Progress Bar -->
     <div class="progress-bar" id="progress-bar"></div>
 
-    <a href="" class="menu" id="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="#project1">Project 1</a></li>
-            <li><a href="#project2">Project 2</a></li>
-            <li><a href="#project3">Project 3</a></li>
-            <li><a href="#project4">Project 4</a></li>
-        </ul>
-    </a>
-
     <!-- Project 1 -->
-    <a href="" class="project" id="project1">
+    <div class="project" id="project">
         <h2>Project 1</h2>
         <img src="screenshot1.png" alt="Project 1 Screenshot">
         <div class="code-panel">
@@ -56,10 +46,10 @@
                 </div>
             </div>
         </div>
-    </a>
+    </div>
 
     <!-- Project 2 -->
-    <a href="" class="project" id="project2">
+    <div class="project" id="project2">
         <h2>Project 2</h2>
         <img src="screenshot2.png" alt="Project 2 Screenshot">
         <div class="code-panel">
@@ -81,62 +71,73 @@
                 </div>
             </div>
         </div>
-    </a>
+    </div>
 
-    <!-- Project 3 -->
-    <a href="" class="project" id="project3">
-        <h2>Project 2</h2>
-        <img src="screenshot3.png" alt="Project 3 Screenshot">
-        <div class="code-panel">
-            <ul class="nav nav-tabs" id="codeTabs3" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file3-tab" data-bs-toggle="tab" href="#file3" role="tab">File1.js</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File2.css</a>
-                </li>
-                <!-- Add more tabs as needed -->
-            </ul>
-            <div class="tab-content" id="codeTabContent2">
-                <div class="tab-pane fade show active" id="file3" role="tabpanel">
-                    <pre>// Code for File1.js...</pre>
-                </div>
-                <div class="tab-pane fade" id="file5" role="tabpanel">
-                    <pre>/* Code for File3.css... */</pre>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <!-- Project 4 -->
-    <a href="" class="project" id="project4">
-        <h2>Project 2</h2>
-        <img src="screenshot4.png" alt="Project 4 Screenshot">
-        <div class="code-panel">
-            <ul class="nav nav-tabs" id="codeTabs4" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File1.js</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file5-tab" data-bs-toggle="tab" href="#file5" role="tab">File2.css</a>
-                </li>
-                <!-- Add more tabs as needed -->
-            </ul>
-            <div class="tab-content" id="codeTabContent2">
-                <div class="tab-pane fade show active" id="file3" role="tabpanel">
-                    <pre>// Code for File1.js...</pre>
-                </div>
-                <div class="tab-pane fade" id="file4" role="tabpanel">
-                    <pre>/* Code for File2.css... */</pre>
-                </div>
-            </div>
-        </div>
-    </a>
     
     <!-- Add more projects as needed -->
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="fades.js"></script>
+    <script>
 
+        let canShowProjects = false; // Flag to control when projects can be shown
+
+        // Welcome message fade-out and scroll prompt
+        const welcomeMessage = document.getElementById('welcome-message');
+        const scrollPrompt = document.getElementById('scroll-prompt');
+
+        // Handle the welcome message fade-out
+        setTimeout(() => {
+            welcomeMessage.classList.add('fade-out');
+            setTimeout(() => {
+                welcomeMessage.style.display = 'none';
+                // Display the scroll prompt
+                scrollPrompt.classList.add('show');
+                setTimeout(() => {
+                    scrollPrompt.classList.remove('show');
+                    scrollPrompt.classList.add('fade-out');
+                    setTimeout(() => {
+                        scrollPrompt.style.display = 'none';
+                        canShowProjects = true; // Allow projects to be shown on scroll
+                        document.body.classList.add('show-projects'); // Add the class to show projects
+                        window.dispatchEvent(new Event('scroll')); // Trigger scroll event to show projects
+                    }, 1000); // 1 second for the fade-out effect of the scroll prompt
+                }, 1500); // 1.5 seconds before fading out the scroll prompt
+            }, 1500); // 1.5 seconds for the fade-out effect of the welcome message
+        }, 1500); // 1.5 seconds before fading out the welcome message
+
+        // Handle scroll effects
+        const projects = document.querySelectorAll('.project');
+        const progressBar = document.getElementById('progress-bar');
+
+        window.addEventListener('scroll', () => {
+            let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollPercent = (scrollPos / scrollHeight) * 100;
+            progressBar.style.width = scrollPercent + '%';
+
+            if (!canShowProjects) return; // Prevent showing projects before scroll prompt fades out
+
+            const viewportHeight = window.innerHeight;
+
+            projects.forEach((project) => {
+                let projectTop = project.getBoundingClientRect().top;
+                let projectBottom = project.getBoundingClientRect().bottom;
+                let fadeInStart = viewportHeight * 0.3; // When 30% of the viewport height
+                let fadeOutEnd = viewportHeight * 0.7; // When 70% of the viewport height
+
+                // Fade in if the project is partially within the viewport
+                if (projectTop < fadeOutEnd && projectBottom > fadeInStart) {
+                    project.classList.add('active');
+                } else {
+                    project.classList.remove('active');
+                }
+            });
+        });
+
+</script>
+
+</script>
+
+    </script>
 </body>
 </html>
