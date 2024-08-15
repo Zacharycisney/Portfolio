@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+// index.html <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +20,10 @@
         <p>Scroll to see my projects</p>
     </div>
 
-    <!-- Menu -->
-    <div class="menu" id="menu">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <a href="" class="menu" id="menu">
         <h2>Menu</h2>
         <ul>
             <li><a href="#project1">Project 1</a></li>
@@ -30,10 +31,7 @@
             <li><a href="#project3">Project 3</a></li>
             <li><a href="#project4">Project 4</a></li>
         </ul>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar" id="progress-bar"></div>
+    </a>
 
     <!-- Project 1 -->
     <a href="" class="project" id="project1">
@@ -42,12 +40,10 @@
         <div class="code-panel">
             <ul class="nav nav-tabs" id="codeTabs1" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file1-tab" data-bs-toggle="tab" href="#file1"
-                        role="tab">File1.js</a>
+                    <a class="nav-link active text-light bg-dark" id="file1-tab" data-bs-toggle="tab" href="#file1" role="tab">File1.js</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file2-tab" data-bs-toggle="tab" href="#file2"
-                        role="tab">File2.css</a>
+                    <a class="nav-link text-light bg-dark" id="file2-tab" data-bs-toggle="tab" href="#file2" role="tab">File2.css</a>
                 </li>
                 <!-- Add more tabs as needed -->
             </ul>
@@ -69,12 +65,10 @@
         <div class="code-panel">
             <ul class="nav nav-tabs" id="codeTabs2" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file3-tab" data-bs-toggle="tab" href="#file3"
-                        role="tab">File1.js</a>
+                    <a class="nav-link active text-light bg-dark" id="file3-tab" data-bs-toggle="tab" href="#file3" role="tab">File1.js</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4"
-                        role="tab">File2.css</a>
+                    <a class="nav-link text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File2.css</a>
                 </li>
                 <!-- Add more tabs as needed -->
             </ul>
@@ -91,26 +85,24 @@
 
     <!-- Project 3 -->
     <a href="" class="project" id="project3">
-        <h2>Project 3</h2>
+        <h2>Project 2</h2>
         <img src="screenshot3.png" alt="Project 3 Screenshot">
         <div class="code-panel">
             <ul class="nav nav-tabs" id="codeTabs3" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file5-tab" data-bs-toggle="tab" href="#file5"
-                        role="tab">File1.js</a>
+                    <a class="nav-link active text-light bg-dark" id="file3-tab" data-bs-toggle="tab" href="#file3" role="tab">File1.js</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file6-tab" data-bs-toggle="tab" href="#file6"
-                        role="tab">File2.css</a>
+                    <a class="nav-link text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File2.css</a>
                 </li>
                 <!-- Add more tabs as needed -->
             </ul>
-            <div class="tab-content" id="codeTabContent3">
-                <div class="tab-pane fade show active" id="file5" role="tabpanel">
+            <div class="tab-content" id="codeTabContent2">
+                <div class="tab-pane fade show active" id="file3" role="tabpanel">
                     <pre>// Code for File1.js...</pre>
                 </div>
-                <div class="tab-pane fade" id="file6" role="tabpanel">
-                    <pre>/* Code for File2.css... */</pre>
+                <div class="tab-pane fade" id="file5" role="tabpanel">
+                    <pre>/* Code for File3.css... */</pre>
                 </div>
             </div>
         </div>
@@ -118,34 +110,33 @@
 
     <!-- Project 4 -->
     <a href="" class="project" id="project4">
-        <h2>Project 4</h2>
+        <h2>Project 2</h2>
         <img src="screenshot4.png" alt="Project 4 Screenshot">
         <div class="code-panel">
             <ul class="nav nav-tabs" id="codeTabs4" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active text-light bg-dark" id="file7-tab" data-bs-toggle="tab" href="#file7"
-                        role="tab">File1.js</a>
+                    <a class="nav-link active text-light bg-dark" id="file4-tab" data-bs-toggle="tab" href="#file4" role="tab">File1.js</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light bg-dark" id="file8-tab" data-bs-toggle="tab" href="#file8"
-                        role="tab">File2.css</a>
+                    <a class="nav-link text-light bg-dark" id="file5-tab" data-bs-toggle="tab" href="#file5" role="tab">File2.css</a>
                 </li>
                 <!-- Add more tabs as needed -->
             </ul>
-            <div class="tab-content" id="codeTabContent4">
-                <div class="tab-pane fade show active" id="file7" role="tabpanel">
+            <div class="tab-content" id="codeTabContent2">
+                <div class="tab-pane fade show active" id="file3" role="tabpanel">
                     <pre>// Code for File1.js...</pre>
                 </div>
-                <div class="tab-pane fade" id="file8" role="tabpanel">
+                <div class="tab-pane fade" id="file4" role="tabpanel">
                     <pre>/* Code for File2.css... */</pre>
                 </div>
             </div>
         </div>
     </a>
+    
+    <!-- Add more projects as needed -->
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="fades.js"></script>
 
 </body>
-
 </html>

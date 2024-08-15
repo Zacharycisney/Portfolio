@@ -31,7 +31,7 @@ body {
     opacity: 1;
 }
 
-.project {
+.project .menu{
     min-height: 100vh;
     padding: 100px 50px;
     opacity: 0;
@@ -43,7 +43,7 @@ body {
 
 
 /* Ensure projects are visible only after .show-projects class is added to body */
-body.show-projects .project {
+body.show-projects .project .menu{
     visibility: visible;
 }
 
