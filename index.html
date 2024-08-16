@@ -39,23 +39,22 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-
-                            The banking app allows a user who is either a customer, employee or admin to: make transactions, change roles or see tranaction history based on what role they are.
+                            The banking app allows a user, whether they are a customer, employee, or admin, to make transactions, change roles, or view transaction history based on their role.
                         </p>
                         <p>
-                            The banking app uses Express, React, MongoDB and Node to display and store data. The backend uses routes to set up accounts, perform transaction, change roles and retrive a customer. 
-                            The backend is set up so that transactions can be recalled by comparing their date and associated customerID with the current customer that is selected.  
-                            By utilizing sessions and the backend bankingRoutes the program can transfer the date when making a transaction or determine if a play has entered the correct login by comparing the 
-                            stored hash password and the current password that has been hashed. Sessions also allows the frontend access to a customer which is stored in the middleware when a user logs in.
-                            By allowing the frontend to have easy access to the data in the middle it is much easier and quicker to show account stats. Finally the frontend UI does a fantastic job of displaying
-                            all of the user information in a friendly manner that is infomative. The animations and notifications allow for the user to quickly and easily understand what is happening. One point 
-                            that our team was uncertian about was wither of not to make a seperate page for customers that want to make transactions in their own account in addtion to the transactions that can 
-                            be made to other users as well. 
+                            The banking app uses Express, React, MongoDB, and Node to display and store data. The backend is designed with routes to set up accounts, perform transactions, change roles, and retrieve customer information. 
+                            Transactions can be recalled by comparing their date and associated customerID with the currently selected customer. 
+                            By utilizing sessions and backend banking routes, the program can transfer data during transactions or verify a user's login by comparing the stored hashed password with the current hashed password. 
+                            Sessions also allow the frontend to access customer data stored in the middleware when a user logs in.
+                            This easy access to data in the middle layer makes it quicker to display account statistics. Finally, the frontend UI does a fantastic job of presenting 
+                            all user information in a friendly and informative manner. The animations and notifications help users quickly and easily understand what is happening. One point 
+                            that our team was uncertain about was whether or not to create a separate page for customers to make transactions within their own accounts, in addition to transactions that can be made to other users.
                         </p>
                         <p>
-                            My role on this assingment was to determine how to store all the users and access their transactions in addition to writting the routes that would access these transactions. My secondary 
+                            My role in this assignment was to determine how to store all user data and access their transactions, as well as writing the routes that would access these transactions. My secondary 
                             contribution was helping to connect and debug how sessions would interface with the frontend.
                         </p>
+                        
                     </div>
 
 
@@ -68,9 +67,9 @@
                         </video>
                         <h3>Key Takeaways:</h3>
                         <ul>
-                            <li>Have a perfect understanding of your part of the project so that you can explain it to others</li>
-                            <li>Write clean code with in the first two commits</li>
-                            <li>Have a clear understanding of all parts of the program before a group meeting (even if its not an indepth understanding)</li>
+                            <li>Have a thorough understanding of your part of the project so that you can explain it to others.</li>
+                            <li>Write clean code within the first two commits.</li>
+                            <li>Have a clear understanding of all parts of the program before a group meeting (even if it's not an in-depth understanding).</li>                                                      
                         </ul>
                     </div>
                 </div>
@@ -94,19 +93,19 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            The hangman game generates a random word that the user then has to guess. They have a limited amount of guess before they loose and if they win their score will be display on the
-                            winners chart if they are in top 10 winners.
+                            The hangman game generates a random word that the user must guess. They have a limited number of guesses before they lose, but if they win, their score will be displayed on the 
+                            winners' chart if they are among the top 10 winners.
                         </p>
                         <p>
-                            Similar to the banking app this is a MongoDB, Express, React and Node stack. When a user enters their name it is stored and a random word is generated both are stored in sessions. 
-                            There are multiple collections that are created to track word, scores/players and guessed letters. The guessed letters are cleared out when a new game is started  and once a player 
-                            wins their score is stored in the scores collection. 
+                            Similar to the banking app, this project uses a MongoDB, Express, React, and Node stack. When a user enters their name, it is stored, and a random word is generated—both are stored in sessions. 
+                            Multiple collections are created to track words, scores/players, and guessed letters. The guessed letters are cleared out when a new game is started, and once a player 
+                            wins, their score is stored in the scores collection.
                         </p>
                         <p>
-                            My part in this project was to create the collections and write the routes which would access the players, scores and guessed letter. In the original routes file there was a route
-                            with would take the secret word and iterate throught the length of word and compare the chars to the guessed letters. If there was a matching char wiht a guessed letter it would 
-                            then be displayed and if not then there would be a blank space added. This was an accessiblity issue so this route was adapted into a session route to become easily accessible.
-                        </p>
+                            My role in this project was to create the collections and write the routes that would access the players, scores, and guessed letters. In the original routes file, there was a route
+                            that would take the secret word, iterate through its length, and compare the characters to the guessed letters. If there was a matching character with a guessed letter, it would 
+                            be displayed; if not, a blank space would be added. This was an accessibility issue, so this route was adapted into a session route to make it more easily accessible.
+                        </p>                        
                     </div>
 
 
@@ -119,8 +118,8 @@
                         </video>
                         <h3>Key Takeaways:</h3>
                         <ul>
-                            <li>Being flexible and open to other members plans</li>
-                            <li>When you are not the leading expert on a certian part of the project speak up and ask to be taught</li>
+                            <li>Be flexible and open to other members' plans.</li>
+                            <li>When you are not the leading expert on a certain part of the project, speak up and ask to be taught.</li>                            
                         </ul>
                     </div>
                 </div>
@@ -145,14 +144,13 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            This a super simple banking app that allowed for users to move money around with in their own account. There is no styling
-                            becuase this program was focused on using routes and session tracking using cors.
+                            This is a super simple banking app that allows users to move money within their own account. There is no styling because this 
+                            program focuses on using routes and session tracking with CORS.
                         </p>
                         <p>
-                            This program was my first attempt at using sessions. I learned how the front end and backend talked to each other in a modern MERN
-                            progamming stack. The routes did a huge amount of the work when it came to transfering money will the session gave the user input 
-                            did minimal user input validation. 
-                        </p>
+                            This program was my first attempt at using sessions. I learned how the frontend and backend communicate in a modern MERN 
+                            programming stack. The routes handled most of the work for transferring money, while the session provided minimal user input validation.
+                        </p>                        
                     </div>
 
 
@@ -165,8 +163,8 @@
                         </video>
                         <h3>Key Takeaways</h3>
                         <ul>
-                            <li>Sessions CAN be confusing if you don't know what is in your front or backend</li>
-                            <li>Writting great warnings and throwing descriptive errors saves huge amounts of time when you get to debugging</li>
+                            <li>Sessions can be confusing if you don't know what is in your front-end or back-end.</li>
+                            <li>Writing clear warnings and throwing descriptive errors save a huge amount of time during debugging.</li>                            
                         </ul>
                     </div>
                 </div>
@@ -190,15 +188,17 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            This game used a gride of buttons which the players could click and a piece to the bord. Once a player had four pieces that matched diagnoally, lateralliy or verticly 
-                            then they would win. The program used a boolean to determine which player was placing a piece informed the winning play that they had won once their winning 
-                            move was performed. The interesting part about this game was they way in which we checked for a winning combonation. We would pass in the buttons which could be a 
-                            winning combonation and then if it returned true we would then find the color and inform that colored player that they had one. 
+                            This game used a grid of buttons that players could click to place a piece on the board. Once a player had four pieces
+                             that matched diagonally, laterally, or vertically, they would win. The program used a boolean to determine which 
+                             player was placing a piece and informed the winning player that they had won once their winning move was performed. 
+                             The interesting part about this game was the way we checked for a winning combination. We would pass in the buttons 
+                             that could form a winning combination, and if it returned true, we would find the color and inform that colored player
+                              that they had won.
                         </p>
                         <p>
-                            One thing that became an issue with this program was that I had incorrectly labeled my UI and my checks could not determine if the correct combonation requirments had 
-                            been met. After using many console logs I had finally found and fixed the problem.
-                        </p>
+                            One issue that arose with this program was that I had incorrectly labeled my UI, which prevented my checks from determining
+                             if the correct combination requirements had been met. After using many console logs, I finally found and fixed the problem.
+                        </p>                        
                     </div>
 
 
@@ -211,10 +211,9 @@
                         </video>
                         <h3>Key Takeaways</h3>
                         <ul>
-                            <li>It's very important to have organized UI so the the backend can understand what is happening</li>
-                            <li>Many operations can be done at once but, should be isolated for easy debugging</li>
-                            <li>Being simple is smart</li>
-                            <!-- Add more takeaways as needed -->
+                            <li>It's very important to have an organized UI so that the backend can understand what is happening.</li>
+                            <li>Many operations can be done at once, but they should be isolated for easier debugging.</li>
+                            <li>Being simple is smart.</li>                            
                         </ul>
                     </div>
                 </div>
