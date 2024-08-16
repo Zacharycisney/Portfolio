@@ -41,8 +41,8 @@ window.addEventListener('scroll', () => {
     projects.forEach((project) => {
         let projectTop = project.getBoundingClientRect().top;
         let projectBottom = project.getBoundingClientRect().bottom;
-        let fadeInStart = viewportHeight * 0.3; // When 30% of the viewport height
-        let fadeOutEnd = viewportHeight * 0.7; // When 70% of the viewport height
+        let fadeInStart = viewportHeight * 0.25; // When 20% of the viewport height
+        let fadeOutEnd = viewportHeight * 0.75;  // When 80% of the viewport height        
 
         // Fade in if the project is partially within the viewport
         if (projectTop < fadeOutEnd && projectBottom > fadeInStart) {
