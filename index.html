@@ -39,7 +39,11 @@
                         <h2>How The Banking App Works</h2>
                         <p>
                             <!-- Description -->
-                            The banking app uses Express, MongoDB and Node to display and store data. The backend uses routes to set up accounts, perform transaction, change roles and retrive a customer. 
+
+                            The banking app allows a user who is either a customer, employee or admin to: make transactions, change roles or see tranaction history based on what role they are.
+                        </p>
+                        <p>
+                            The banking app uses Express, React, MongoDB and Node to display and store data. The backend uses routes to set up accounts, perform transaction, change roles and retrive a customer. 
                             The backend is set up so that transactions can be recalled by comparing their date and associated customerID with the current customer that is selected.  
                             By utilizing sessions and the backend bankingRoutes the program can transfer the date when making a transaction or determine if a play has entered the correct login by comparing the 
                             stored hash password and the current password that has been hashed. Sessions also allows the frontend access to a customer which is stored in the middleware when a user logs in.
@@ -63,7 +67,6 @@
                             <li>Have a perfect understanding of your part of the project so that you can explain it to others</li>
                             <li>Write clean code with in the first two commits</li>
                             <li>Have a clear understanding of all parts of the program before a group meeting (even if its not an indepth understanding)</li>
-                            <!-- Add more takeaways as needed -->
                         </ul>
                     </div>
                 </div>
@@ -78,7 +81,7 @@
 
             <div class="project-summary-container">
                 <header class="project-header">
-                    <h1>Hangman</h1>
+                    <h1>Hangman Game</h1>
                 </header>
 
                 <div class="project-content">
@@ -86,9 +89,20 @@
                     <div class="program-description">
                         <h2>Description of How the Program Works</h2>
                         <p>
-                            <!-- Insert your description here -->
-                            This section provides a detailed explanation of the program's functionality,
-                            how it was built, the logic behind it, and its overall purpose.
+                            <!-- Description -->
+                            The hangman game generates a random word that the user then has to guess. They have a limited amount of guess before they loose and if they win their score will be display on the
+                            winners chart if they are in top 10 winners.
+                        </p>
+                        <p>
+                            Similar to the banking app this is a MongoDB, Express, React and Node stack. When a user enters their name it is stored and a random word is generated both are stored in sessions. 
+                            There are multiple collections that are created to track word, scores/players and guessed letters. The guessed letters are cleared out when a new game is started  and once a player 
+                            wins their score is stored in the scores collection. 
+                        </p>
+                        <p>
+                            My part in this project was to create the collections and write the routes which would access the players, scores and guessed letter. In the original routes file there was a route
+                            with would take the secret word and iterate throught the length of word and compare the chars to the guessed letters. If there was a matching char wiht a guessed letter it would 
+                            then be displayed and if not then there would be a blank space added. This was an accessiblity issue so this route was adapted into a session route to become easily accessible.
+
                         </p>
                     </div>
 
@@ -96,12 +110,10 @@
                     <!-- Right Section: Image and Key Takeaways -->
                     <div class="project-details">
                         <img src="project-image.png" alt="Project Image">
-                        <h3>Hello World</h3>
+                        <h3>Key Takeaways:</h3>
                         <ul>
-                            <li>First key takeaway from the project</li>
-                            <li>Second key takeaway from the project</li>
-                            <li>Third key takeaway from the project</li>
-                            <!-- Add more takeaways as needed -->
+                            <li>Being flexible and open to other members plans</li>
+                            <li>When you are not the leading expert on a certian part of the project speak up and ask to be taught</li>
                         </ul>
                     </div>
                 </div>
@@ -216,7 +228,6 @@
                             <li>First key takeaway from the project</li>
                             <li>Second key takeaway from the project</li>
                             <li>Third key takeaway from the project</li>
-                            <!-- Add more takeaways as needed -->
                         </ul>
                     </div>
                 </div>
