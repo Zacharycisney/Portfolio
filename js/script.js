@@ -4,7 +4,7 @@ let canShowProjects = false; // Flag to control when projects can be shown
 const welcomeMessage = document.getElementById('welcome-message');
 const scrollPrompt = document.getElementById('scroll-prompt');
 
-// Handle the welcome message fade-out
+// Handle the index welcome message and scroll prompt fade-out
 setTimeout(() => {
     welcomeMessage.classList.add('fade-out');
     setTimeout(() => {
@@ -23,6 +23,56 @@ setTimeout(() => {
         }, 1500); // 1.5 seconds before fading out the scroll prompt
     }, 1500); // 1.5 seconds for the fade-out effect of the welcome message
 }, 1500); // 1.5 seconds before fading out the welcome message
+
+
+// Handle language hover
+document.addEventListener('DOMContentLoaded', () => {
+    const spotlight = document.querySelector('.spotlight');
+    const languageLinks = document.querySelectorAll('.languages-and-skills a');
+    const mainMenuContainer = document.querySelector('.main-menu-container');
+
+    // Function to reset all language link styles
+    const resetLanguageStyles = () => {
+        languageLinks.forEach(link => {
+            const heading = link.querySelector('h4');
+            heading.style.backgroundColor = ''; // Reset background color
+            heading.style.color = ''; // Reset text color
+        });
+    };
+
+    // Function to reset spotlight and language link styles
+    const resetSpotlight = () => {
+        spotlight.innerHTML = '<h2>Spotlight</h2><p>This section will feature a highlighted skill or project based on the selected language/skill.</p>';
+        spotlight.style.backgroundColor = ''; // Reset background color
+        spotlight.style.color = ''; // Reset text color
+
+        resetLanguageStyles();
+    };
+
+    languageLinks.forEach(link => {
+        const heading = link.querySelector('h4'); // Select the h4 inside the link
+
+        link.addEventListener('mouseenter', (event) => {
+            // Reset all languages before applying new styles
+            resetLanguageStyles();
+
+            const content = event.currentTarget.getAttribute('data-content');
+            spotlight.innerHTML = content;
+
+            spotlight.style.backgroundColor = '#f8f9fa'; // Change background color
+            spotlight.style.color = '#000000'; // Change text color
+
+            heading.style.backgroundColor = '#f8f9fa'; // Change background color
+            heading.style.color = '#000000'; // Change text color
+        });
+    });
+
+    // Add a mouseleave event to the main container to reset everything when mouse exits the section
+    mainMenuContainer.addEventListener('mouseleave', () => {
+        resetSpotlight();
+    });
+});
+
 
 // Handle scroll effects
 const projects = document.querySelectorAll('.project');
