@@ -1,0 +1,47 @@
+/*-------------------------------------- Menu Card ---------------------------------------*/
+.main-menu-panel {
+    max-width: 1100px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+}
+
+.main-menu-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.open-space {
+    flex-basis: 15%; /* 15% on the left and 15% on the right makes 30% total */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 70%; /* This will take up the remaining 70% */
+}
+
+.languages-and-skills {
+    width: 100px;
+}
+
+.spotlight {
+    width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.languages-and-skills a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.languages-and-skills h4 {
+    padding: 10px;
+    border-radius: 5px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    transition: background-color 0.3s ease;
+}

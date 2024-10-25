@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/menuCard.css">
+    <link rel="stylesheet" href="./css/projectCard.css">    
+</head>
+
+<body>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message" id="welcome-message">
+        <h1>Welcome to My Portfolio</h1>
+    </div>
+
+    <!-- Scroll Prompt -->
+    <div class="scroll-prompt" id="scroll-prompt">
+        <p>Scroll to see my projects</p>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+
+    <!-- Home Page -->
+    <div class="project" id="project0">
+        <div class="main-menu-panel">
+
+            <h1>Languages and Skills</h1>
+
+            <!-- the languages and skills section should take up 2/5's -->
+            <div class="main-menu-container">
+                <div class="open-space"></div>
+
+                <div class="content">
+                    <div class="languages-and-skills">
+                        <!-- <a href="./Pages/JavaScript.html" data-content='<a href="./Pages/JavaScript.html"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
+                            <h4>JavaScript</h4>
+                        </a> -->
+                        <a href="{{ site.baseurl }}/Pages/JavaScript" data-content='<a href="{{ site.baseurl }}/Pages/JavaScript"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
+                            <h4>JavaScript</h4>
+                        </a>
+                        <a href="#" data-content='<a href="#"> <h2>C#</h2> <p>C# is a language developed by Microsoft, commonly used for Windows applications.</p> </a>'>
+                            <h4>C#</h4>
+                        </a>
+                        <a href="#" data-content='<a href="#"> <h2>Python</h2> <p>Python is known for its readability and is used in various fields including web development and data science.</p> </a>'>
+                            <h4>Python</h4>
+                        </a>
+                    </div>
+                    
+    
+                    <div class="spotlight">
+                        <h2>Spotlight</h2>
+                        <p>This section will feature a highlighted skill or project based on the selected language/skill.</p>
+                    </div>
+                </div>
+
+                <div class="open-space"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Project 1 -->
+    <div class="project" id="project1">
+        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/BankingApp">
+
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Banking App</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            The banking app allows a user, whether they are a customer, employee, or admin, to make
+                            transactions, change roles, or view transaction history based on their role.
+                        </p>
+                        <p>
+                            The banking app uses Express, React, MongoDB, and Node to display and store data. The
+                            backend is designed with routes to set up accounts, perform transactions, change roles, and
+                            retrieve customer information.
+                            Transactions can be recalled by comparing their date and associated customerID with the
+                            currently selected customer.
+                            By utilizing sessions and backend banking routes, the program can transfer data during
+                            transactions or verify a user's login by comparing the stored hashed password with the
+                            current hashed password.
+                            Sessions also allow the frontend to access customer data stored in the middleware when a
+                            user logs in.
+                            This easy access to data in the middle layer makes it quicker to display account statistics.
+                            Finally, the frontend UI does a fantastic job of presenting
+                            all user information in a friendly and informative manner. The animations and notifications
+                            help users quickly and easily understand what is happening. One point
+                            that our team was uncertain about was whether or not to create a separate page for customers
+                            to make transactions within their own accounts, in addition to transactions that can be made
+                            to other users.
+                        </p>
+                        <p>
+                            My role in this assignment was to determine how to store all user data and access their
+                            transactions, as well as writing the routes that would access these transactions. My
+                            secondary
+                            contribution was helping to connect and debug how sessions would interface with the
+                            frontend.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/admin.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways:</h3>
+                        <ul>
+                            <li>Have a thorough understanding of your part of the project so that you can explain it to
+                                others.</li>
+                            <li>Write clean code within the first two commits.</li>
+                            <li>Have a clear understanding of all parts of the program before a group meeting (even if
+                                it's not an in-depth understanding).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project" id="project2">
+        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Hangman">
+
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Hangman Game</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            The hangman game generates a random word that the user must guess. They have a limited
+                            number of guesses before they lose, but if they win, their score will be displayed on the
+                            winners' chart if they are among the top 10 winners.
+                        </p>
+                        <p>
+                            Similar to the banking app, this project uses a MongoDB, Express, React, and Node stack.
+                            When a user enters their name, it is stored, and a random word is generated—both are stored
+                            in sessions.
+                            Multiple collections are created to track words, scores/players, and guessed letters. The
+                            guessed letters are cleared out when a new game is started, and once a player
+                            wins, their score is stored in the scores collection.
+                        </p>
+                        <p>
+                            My role in this project was to create the collections and write the routes that would access
+                            the players, scores, and guessed letters. In the original routes file, there was a route
+                            that would take the secret word, iterate through its length, and compare the characters to
+                            the guessed letters. If there was a matching character with a guessed letter, it would
+                            be displayed; if not, a blank space would be added. This was an accessibility issue, so this
+                            route was adapted into a session route to make it more easily accessible.
+                        </p>
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/Hangman.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways:</h3>
+                        <ul>
+                            <li>Be flexible and open to other members' plans.</li>
+                            <li>When you are not the leading expert on a certain part of the project, speak up and ask
+                                to be taught.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="project" id="project3">
+        <a
+            href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/MongoDB%20Accounts%20(MERN%20and%20Sessions)">
+
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Mongo Accounts</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            This is a super simple banking app that allows users to move money within their own account.
+                            There is no styling because this
+                            program focuses on using routes and session tracking with CORS.
+                        </p>
+                        <p>
+                            This program was my first attempt at using sessions. I learned how the frontend and backend
+                            communicate in a modern MERN
+                            programming stack. The routes handled most of the work for transferring money, while the
+                            session provided minimal user input validation.
+                        </p>
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/mongoaccount.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Sessions can be confusing if you don't know what is in your front-end or back-end.</li>
+                            <li>Writing clear warnings and throwing descriptive errors save a huge amount of time during
+                                debugging.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project" id="project4">
+        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Four%20In%20A%20Row">
+
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Four In a Row</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            This game used a grid of buttons that players could click to place a piece on the board.
+                            Once a player had four pieces
+                            that matched diagonally, laterally, or vertically, they would win. The program used a
+                            boolean to determine which
+                            player was placing a piece and informed the winning player that they had won once their
+                            winning move was performed.
+                            The interesting part about this game was the way we checked for a winning combination. We
+                            would pass in the buttons
+                            that could form a winning combination, and if it returned true, we would find the color and
+                            inform that colored player
+                            that they had won.
+                        </p>
+                        <p>
+                            One issue that arose with this program was that I had incorrectly labeled my UI, which
+                            prevented my checks from determining
+                            if the correct combination requirements had been met. After using many console logs, I
+                            finally found and fixed the problem.
+                        </p>
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/fourinarow.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>It's very important to have an organized UI so that the backend can understand what is
+                                happening.</li>
+                            <li>Many operations can be done at once, but they should be isolated for easier debugging.
+                            </li>
+                            <li>Being simple is smart.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+    <!-- Animation JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

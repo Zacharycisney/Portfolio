@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
-    <link rel="stylesheet" href="./css/baseStyles.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/menuCard.css">
     <link rel="stylesheet" href="./css/projectCard.css">    
 </head>
@@ -40,13 +40,16 @@
 
                 <div class="content">
                     <div class="languages-and-skills">
-                        <a href="#" data-content="<h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p>">
+                        <!-- <a href="./Pages/JavaScript.html" data-content='<a href="./Pages/JavaScript.html"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
+                            <h4>JavaScript</h4>
+                        </a> -->
+                        <a href="{{ site.baseurl }}/Pages/JavaScript" data-content='<a href="{{ site.baseurl }}/Pages/JavaScript"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
                             <h4>JavaScript</h4>
                         </a>
-                        <a href="#" data-content="<h2>C#</h2> <p>C# is a language developed by Microsoft, commonly used for Windows applications.</p>">
+                        <a href="#" data-content='<a href="#"> <h2>C#</h2> <p>C# is a language developed by Microsoft, commonly used for Windows applications.</p> </a>'>
                             <h4>C#</h4>
                         </a>
-                        <a href="#" data-content="<h2>Python</h2> <p>Python is known for its readability and is used in various fields including web development and data science.</p>">
+                        <a href="#" data-content='<a href="#"> <h2>Python</h2> <p>Python is known for its readability and is used in various fields including web development and data science.</p> </a>'>
                             <h4>Python</h4>
                         </a>
                     </div>
@@ -301,6 +304,6 @@
 
     <!-- Animation JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/featuredProjects.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

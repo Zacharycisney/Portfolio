@@ -1,0 +1,35 @@
+# Site settings
+title: "Your Portfolio"
+description: "A personal portfolio showcasing projects"
+baseurl: "/Portfolio" # Leave empty for GitHub Pages project site unless you're using a subdirectory
+url: "https://zacharycisney.github.io" # Github io
+
+
+# Includes directories
+includes_dir: _includes
+
+# Build settings
+# markdown: kramdown # Process markdown files
+# theme: minima # Optionally, if you're using a theme
+
+# Exclude files and directories from being copied to the final site
+exclude:
+  - README.md
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+
+# Optional: Set permalink structure (nice URLs)
+permalink: pretty
+
+# Optional: GitHub pages settings
+github:
+  is_project_page: true # Set to true if this is a project site, false for user or org site
+
+# Optional: Navigation settings (if you want to configure navigation globally)
+navigation:
+  - name: Home
+    link: "{{ site.baseurl }}/"
+  - name: JavaScriptProjects
+    link: "{{ site.baseurl }}/Pages/JavaScript"
+
