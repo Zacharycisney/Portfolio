@@ -31,5 +31,5 @@ navigation:
   - name: Home
     link: "{{ site.baseurl }}/"
   - name: JavaScriptProjects
-    link: "{{ site.baseurl }}/Pages/JavaScript"
+    link: "{{ site.baseurl }}/JavaScript"
 
