@@ -1,7 +1,7 @@
 # Site settings
 title: "Your Portfolio"
 description: "A personal portfolio showcasing projects"
-baseurl: "/Portfolio" # Leave empty for GitHub Pages project site unless you're using a subdirectory
+baseurl: "/Portfolio/" # Leave empty for GitHub Pages project site unless you're using a subdirectory
 url: "https://zacharycisney.github.io" # Github io
 
 
@@ -32,4 +32,5 @@ navigation:
     link: "{{ site.baseurl }}/"
   - name: JavaScriptProjects
     link: "{{ site.baseurl }}/JavaScript"
-
+  - name: C#Projects
+    link: "{{ site.baseurl }}/Pages/C#"
