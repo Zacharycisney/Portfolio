@@ -22,15 +22,3 @@ exclude:
 # Optional: Set permalink structure (nice URLs)
 permalink: pretty
 
-# Optional: GitHub pages settings
-github:
-  is_project_page: true # Set to true if this is a project site, false for user or org site
-
-# Optional: Navigation settings (if you want to configure navigation globally)
-navigation:
-  - name: Home
-    link: "{{ site.baseurl }}/"
-  - name: JavaScriptProjects
-    link: "{{ site.baseurl }}/JavaScript"
-  - name: C#Projects
-    link: "{{ site.baseurl }}/C#"
