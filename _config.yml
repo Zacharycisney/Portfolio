@@ -33,4 +33,4 @@ navigation:
   - name: JavaScriptProjects
     link: "{{ site.baseurl }}/JavaScript"
   - name: C#Projects
-    link: "{{ site.baseurl }}/Pages/C#"
+    link: "{{ site.baseurl }}/C#"
