@@ -64,11 +64,11 @@
 
     <!-- Project 1 -->
     <div class="project" id="project1">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/BankingApp">
+        <a href="#">
 
             <div class="project-summary-container">
                 <header class="project-header">
-                    <h1>Banking App</h1>
+                    <h1>Flight Seating (Part-1)</h1>
                 </header>
 
                 <div class="project-content">
@@ -77,34 +77,24 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            The banking app allows a user, whether they are a customer, employee, or admin, to make
-                            transactions, change roles, or view transaction history based on their role.
+                            The flight seating app allows for an employee to look-up available seats and select a seat for customer. In part 
+                            one the seats are loaded in from a file (which serves as a database) so that they can be displayed. The names are 
+                            tied to the seat so that they may be accessed when clicked. 
                         </p>
+                        <h5>FlightManager.cs</h5>
                         <p>
-                            The banking app uses Express, React, MongoDB, and Node to display and store data. The
-                            backend is designed with routes to set up accounts, perform transactions, change roles, and
-                            retrieve customer information.
-                            Transactions can be recalled by comparing their date and associated customerID with the
-                            currently selected customer.
-                            By utilizing sessions and backend banking routes, the program can transfer data during
-                            transactions or verify a user's login by comparing the stored hashed password with the
-                            current hashed password.
-                            Sessions also allow the frontend to access customer data stored in the middleware when a
-                            user logs in.
-                            This easy access to data in the middle layer makes it quicker to display account statistics.
-                            Finally, the frontend UI does a fantastic job of presenting
-                            all user information in a friendly and informative manner. The animations and notifications
-                            help users quickly and easily understand what is happening. One point
-                            that our team was uncertain about was whether or not to create a separate page for customers
-                            to make transactions within their own accounts, in addition to transactions that can be made
-                            to other users.
+                            When the application starts the flights and passengers are loaded into their respective objects by the flight 
+                            manager file. Flight manager uses two methods, both of which function in a similar manner by querying into the
+                            database for specific attributes which are grouped by flights and passengers. 
                         </p>
+                        <h5>MainWindow.xaml.cs</h5>
                         <p>
-                            My role in this assignment was to determine how to store all user data and access their
-                            transactions, as well as writing the routes that would access these transactions. My
-                            secondary
-                            contribution was helping to connect and debug how sessions would interface with the
-                            frontend.
+                            Following the two method calls to the flight manager file the list of flights and passengers are loaded into the 
+                            buttons and combo boxes. In the specific case of the buttons when a flight is selected the button layout is determined
+                            by the make and model of the plane. The buttons are loaded in as a basic button with very few attributes. When the 
+                            seats are operational they are updated to reflect the passengers and thier selected seats. An event listener is added 
+                            as well as the correct background and seat number. After the flighs and passengers are loaded properly the combo boxes
+                             are enabled. 
                         </p>
 
                     </div>
@@ -114,16 +104,14 @@
                     <div class="project-details">
                         <!-- <img src="project-image.png" alt="Project Image"> -->
                         <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/admin.mp4" type="video/mp4">
+                            <source src="ProjectVideos/flightseating(part-1).mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <h3>Key Takeaways:</h3>
                         <ul>
-                            <li>Have a thorough understanding of your part of the project so that you can explain it to
-                                others.</li>
-                            <li>Write clean code within the first two commits.</li>
-                            <li>Have a clear understanding of all parts of the program before a group meeting (even if
-                                it's not an in-depth understanding).</li>
+                            <li>On occasion a project that is interconnected in many ways will need to 
+                                be reworked multiple times to find the correct solution.</li>
+                            <li>Proper labeling and naming structer saves time.</li>
                         </ul>
                     </div>
                 </div>
