@@ -64,11 +64,11 @@
 
     <!-- Project 1 -->
     <div class="project" id="project1">
-        <a href="https://github.com/Zacharycisney/CS3280-Assignment6-Part1">
+        <a href="https://github.com/Zacharycisney/CS3280-AirlineReservation-Part2">
 
             <div class="project-summary-container">
                 <header class="project-header">
-                    <h1>Flight Seating (Part-2)</h1>
+                    <h1>Airline Reservation Part-2</h1>
                 </header>
 
                 <div class="project-content">
@@ -77,24 +77,24 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            The flight seating app allows for an employee to look-up available seats and select a seat for customer. In part 
-                            one the seats are loaded in from a file (which serves as a database) so that they can be displayed. The names are 
-                            tied to the seat so that they may be accessed when clicked. 
+                            For specifics on how the intial loading of flights and passengers work see part one. Part two will consist of adding,
+                            deleting and changing of passengers seats.
                         </p>
-                        <h4>FlightManager.cs</h4>
                         <p>
-                            When the application starts the flights and passengers are loaded into their respective objects by the flight 
-                            manager file. Flight manager uses two methods, both of which function in a similar manner by querying into the
-                            database for specific attributes which are grouped by flights and passengers. 
+                            When no passenger is selected the delete and change button is disabled so that the only option the user can interface
+                            with is the add button. Once the button is pushed the combo boxes and other buttons are disabled and a pop-up window 
+                            asks for a first and last name. When the save button is pushed the only option for the user is to select and confirm a
+                            seat.
                         </p>
-                        <h4>MainWindow.xaml.cs</h4>
                         <p>
-                            Following the two method calls to the flight manager file the list of flights and passengers are loaded into the 
-                            buttons and combo boxes. In the specific case of the buttons when a flight is selected the button layout is determined
-                            by the make and model of the plane. The buttons are loaded in as a basic button with very few attributes. When the 
-                            seats are operational they are updated to reflect the passengers and thier selected seats. An event listener is added 
-                            as well as the correct background and seat number. After the flighs and passengers are loaded properly the combo boxes
-                             are enabled. 
+                            The change button requires a passenger to be selected. Once the process starts the combo boxes and delete/add buttons
+                            are disabled. When a selection is made the user is able to commit the changes. The delete button simply removes the 
+                            passenger from the database and updates the flight map accordingly.
+                        </p>
+                        <p>
+                            This assignment was a great lesson on working with team members. My professor gave me the code of another student and I had to
+                            determine which pieces were written wisely and which were unusable and while it took me a while to determine in the end it saved
+                            a lot of time in the long run.
                         </p>
 
                     </div>
@@ -104,14 +104,13 @@
                     <div class="project-details">
                         <!-- <img src="project-image.png" alt="Project Image"> -->
                         <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/flightseating(part-1).mp4" type="video/mp4">
+                            <source src="ProjectVideos/flightseating(part-2).mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <h3>Key Takeaways:</h3>
                         <ul>
-                            <li>On occasion a project that is interconnected in many ways will need to 
-                                be reworked multiple times to find the correct solution.</li>
-                            <li>Proper labeling and naming structer saves time.</li>
+                            <li>It's a wise idea to see and learn from others code with in a group.</li>
+                            <li>Working directly with code that others have written is a talent which can be developed.</li>
                         </ul>
                     </div>
                 </div>
@@ -180,11 +179,11 @@
 
     <!-- Project 3 -->
     <div class="project" id="project3">
-        <a href="#">
+        <a href="https://github.com/Zacharycisney/CS3280-AirlineReservation-Part1">
 
             <div class="project-summary-container">
                 <header class="project-header">
-                    <h1>Flight Seating (Part-1)</h1>
+                    <h1>Airline Reservation Part-1</h1>
                 </header>
 
                 <div class="project-content">
@@ -193,17 +192,17 @@
                         <h2>Description of How the Program Works</h2>
                         <p>
                             <!-- Description -->
-                            The flight seating app allows for an employee to look-up available seats and select a seat for customer. In part 
+                            The airline reservation app allows for an employee to look-up available seats and select a seat for customer. In part 
                             one the seats are loaded in from a file (which serves as a database) so that they can be displayed. The names are 
                             tied to the seat so that they may be accessed when clicked. 
                         </p>
-                        <h5>FlightManager.cs</h5>
+                        <h4>FlightManager.cs</h4>
                         <p>
                             When the application starts the flights and passengers are loaded into their respective objects by the flight 
                             manager file. Flight manager uses two methods, both of which function in a similar manner by querying into the
                             database for specific attributes which are grouped by flights and passengers. 
                         </p>
-                        <h5>MainWindow.xaml.cs</h5>
+                        <h4>MainWindow.xaml.cs</h4>
                         <p>
                             Following the two method calls to the flight manager file the list of flights and passengers are loaded into the 
                             buttons and combo boxes. In the specific case of the buttons when a flight is selected the button layout is determined
