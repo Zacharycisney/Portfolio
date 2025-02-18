@@ -64,6 +64,75 @@
 
     <!-- Project 1 -->
     <div class="project" id="project1">
+        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Hangman">
+
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Iventory Managment System</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            This was a final group project which utilizes a database file to access inventoy and invoices
+                            for a hypothetical small company. There were three different panels: wndMain, wndSearch and 
+                            wndItems. The main window links the search and items windows in addition to creating new 
+                            invoices. The search window allows for filtering invoices and selecting an invoice that opens
+                            on the wndMain panel. The item window creates, changes and deletes items.
+                        </p>
+                        <p>
+                            This project consisted of myself and two other team members. 
+                            My specific task for this assignment was to implement the wndSearch panel. The three filters 
+                            for searching the invoices are based on invoice number, dates and specific totals. The
+                            filters can be cleared or an invoice can be selected and pased back to the main window.
+                        </p>
+                        <p>
+                            The overall implementation of the filters is very simple and repetative. When any new filter
+                             requirements are given they are passed into the clsSearchLogic file which performs an SQL
+                             query, any filter that was left blank will not be added to the query. Invoice selection is
+                             also straight forward, once an invoice is selected it can then be opened in the main window.
+                        </p>
+                        <h4>Side note on group dynamics</h4>
+                        <p>
+                            This group project was a great lesson in teamwork and communication. All points that were lost
+                            were due to the fact that the pages were not connected and the main page did not display selected
+                            invoices. While I left a large note in the wndSearch.xaml.cs file specifying the code which 
+                            passes the selected invoice aswell as a video walking through code, in the end I believe that my 
+                            team mate ran out of time or did not understand the code.
+                        </p>
+                        <p>
+                            This experience taught me that even with clean code and good communication sometimes team dynaics 
+                            can lead to unexpected outcomes and the best we can do is take it in stride. I already had an A 
+                            in this class and even while I lost a large amount of points on this final my dedication saved my 
+                            grade.
+                        </p>
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/IventoryManagmentSystem.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways:</h3>
+                        <ul>
+                            <li>I learned the power of querying in SQL. Solving front end problems using backend solutions can save time.</li>
+                            <li>When you can't pick your teammates you can only do your best.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project" id="project2">
         <a href="https://github.com/Zacharycisney/CS3280-AirlineReservation-Part2">
 
             <div class="project-summary-container">
@@ -93,8 +162,8 @@
                         </p>
                         <p>
                             This assignment was a great lesson on working with team members. My professor gave me the code of another student and I had to
-                            determine which pieces were written wisely and which were unusable and while it took me a while to determine in the end it saved
-                            a lot of time in the long run.
+                            determine which pieces were written wisely and which were unusable and while it took me a while to determine but, in the end it
+                            would have saved me alot of time if I was starting from scratch.
                         </p>
 
                     </div>
@@ -116,64 +185,6 @@
                 </div>
             </div>
             <a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project" id="project2">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Hangman">
-
-            <div class="project-summary-container">
-                <header class="project-header">
-                    <h1>Hangman Game</h1>
-                </header>
-
-                <div class="project-content">
-                    <!-- Left Section: Program Description -->
-                    <div class="program-description">
-                        <h2>Description of How the Program Works</h2>
-                        <p>
-                            <!-- Description -->
-                            The hangman game generates a random word that the user must guess. They have a limited
-                            number of guesses before they lose, but if they win, their score will be displayed on the
-                            winners' chart if they are among the top 10 winners.
-                        </p>
-                        <p>
-                            Similar to the banking app, this project uses a MongoDB, Express, React, and Node stack.
-                            When a user enters their name, it is stored, and a random word is generated—both are stored
-                            in sessions.
-                            Multiple collections are created to track words, scores/players, and guessed letters. The
-                            guessed letters are cleared out when a new game is started, and once a player
-                            wins, their score is stored in the scores collection.
-                        </p>
-                        <p>
-                            My role in this project was to create the collections and write the routes that would access
-                            the players, scores, and guessed letters. In the original routes file, there was a route
-                            that would take the secret word, iterate through its length, and compare the characters to
-                            the guessed letters. If there was a matching character with a guessed letter, it would
-                            be displayed; if not, a blank space would be added. This was an accessibility issue, so this
-                            route was adapted into a session route to make it more easily accessible.
-                        </p>
-                    </div>
-
-
-                    <!-- Right Section: Image and Key Takeaways -->
-                    <div class="project-details">
-                        <!-- <img src="project-image.png" alt="Project Image"> -->
-                        <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/Hangman.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <h3>Key Takeaways:</h3>
-                        <ul>
-                            <li>Be flexible and open to other members' plans.</li>
-                            <li>When you are not the leading expert on a certain part of the project, speak up and ask
-                                to be taught.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </a>
     </div>
 
 
