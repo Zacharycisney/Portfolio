@@ -41,14 +41,17 @@
 
                 <div class="content">
                     <div class="languages-and-skills">
-                        <a href="/Portfolio/JavaScript" data-content='<a href="/Portfolio/JavaScript"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
+                        <!-- <a href="/Portfolio/JavaScript" data-content='<a href="/Portfolio/JavaScript"> <h2>JavaScript</h2> <p>JavaScript is a versatile language used for web development.</p> </a>''>
                             <h4>JavaScript</h4>
-                        </a>
-                        <a href="/Portfolio/CSharp" data-content= '<a href="/Portfolio/CSharp"> <h2>C#</h2> <p>I have built many applications that have utilized C# with in the context of ASP.Net. I enjoy the triple slash comments and simplicty of using objects which allows for coding that is easy to explain and understand, which are some of the many reasons why C# is my favorite languages to code in.</p> <p>Experience: Learned while at Weber State University.</p></a>'>
+                        </a> -->
+                        <a href="/Portfolio/CSharp" data-content= '<a href="/Portfolio/CSharp"> <h2>C#</h2> <p>I have built many applications that have utilized C# with in the context of ASP.Net. I enjoy the triple slash comments and simplicty of using objects which allows for coding that is easy to explain and understand, which are some of the many reasons why C# is my favorite languages to code in.</p></a>'>
                             <h4>C#</h4>
                         </a>
                         <a href="/Portfolio/MachineLearning" data-content='<a href="/Portfolio/MachineLearning"> <h2>Machine Learning</h2> <p>*To be added</p> </a>'>
                             <h4>Machine Learning</h4>
+                        </a>
+                        <a href="/Portfolio/FullStack" data-content='<a href="/Portfolio/FullStack"> <h2>Full Stack</h2> <p>I have built many group and personal projects utilizing RESTful APIs and JavaScript in a REST stack. I also have used a MERN stack which gave me experience with MongoDB which exposed me to non-relational databases. </p> </a>'>
+                            <h4>Full Stack</h4>
                         </a>
                         <a href="#" data-content='<a href="#"> <h2>Python</h2> <p>Python is known for its readability and is used in various fields including web development and data science.</p> </a>'>
                             <h4>Python</h4>
@@ -76,8 +79,67 @@
 
     <!-- Project 1 -->
     <div class="project" id="project1">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/BankingApp">
+        <a href="https://github.com/Zacharycisney/CS3280-AirlineReservation-Part2">
 
+            <div class="project-summary-container">
+                <header class="project-header">
+                    <h1>Airline Reservation Part-2</h1>
+                </header>
+
+                <div class="project-content">
+                    <!-- Left Section: Program Description -->
+                    <div class="program-description">
+                        <h2>Description of How the Program Works</h2>
+                        <p>
+                            <!-- Description -->
+                            For specifics on how the initial loading of flights and passengers works, see part one. Part two focuses on adding, 
+                            deleting, and modifying passenger seats.
+                        </p>
+                        <p>
+                            When no passenger is selected, the delete and change buttons are disabled, ensuring that the only available option 
+                            is the add button. Once the add button is clicked, the combo boxes and other buttons are disabled, and a pop-up window 
+                            prompts the user to enter a first and last name. After clicking the save button, the only remaining action is for the user 
+                            to select and confirm a seat.
+                        </p>
+                        <p>
+                            The change button requires a passenger to be selected. Once the process begins, the combo boxes and delete/add buttons 
+                            are disabled. After making a selection, the user can commit the changes. The delete button simply removes the 
+                            passenger from the database and updates the flight map accordingly.
+                        </p>
+                        <p>
+                            This assignment was a valuable lesson in collaborating with team members. My professor provided me with another student's 
+                            code, and I had to evaluate which parts were well-written and which were unusable. While it took me some time to assess the 
+                            code, in hindsight, starting from scratch might have saved me a lot of time.
+                        </p>
+                        
+
+                        <!-- Language Badges -->
+                        <div class="language-badge" style="background-color: indigo;">C#</div>
+                        <div class="language-badge" style="background-color: orange;">SQL</div>
+                    </div>
+
+
+                    <!-- Right Section: Image and Key Takeaways -->
+                    <div class="project-details">
+                        <!-- <img src="project-image.png" alt="Project Image"> -->
+                        <video width="350" autoplay muted loop controls>
+                            <source src="ProjectVideos/flightseating(part-2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Key Takeaways:</h3>
+                        <ul>
+                            <li>It's a wise idea to see and learn from others code with in a group.</li>
+                            <li>Working directly with code that others have written is a talent which can be developed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project" id="project2">
+            <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/BankingApp">
             <div class="project-summary-container">
                 <header class="project-header">
                     <h1>Banking App</h1>
@@ -120,8 +182,9 @@
                         </p>
 
                         <!-- Language Badges -->
-                        <div class="language-badge" style="background-color: royalblue;">C#</div>
-                        <div class="language-badge" style="background-color: goldenrod;">SQL</div>
+                        <div class="language-badge" style="background-color: grey;">Node</div>
+                        <div class="language-badge" style="background-color: skyblue;">React</div>
+                        <div class="language-badge" style="background-color: green;">MongoDB</div>
                     </div>
 
 
@@ -144,64 +207,6 @@
                 </div>
             </div>
             <a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project" id="project2">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Hangman">
-
-            <div class="project-summary-container">
-                <header class="project-header">
-                    <h1>Hangman Game</h1>
-                </header>
-
-                <div class="project-content">
-                    <!-- Left Section: Program Description -->
-                    <div class="program-description">
-                        <h2>Description of How the Program Works</h2>
-                        <p>
-                            <!-- Description -->
-                            The hangman game generates a random word that the user must guess. They have a limited
-                            number of guesses before they lose, but if they win, their score will be displayed on the
-                            winners' chart if they are among the top 10 winners.
-                        </p>
-                        <p>
-                            Similar to the banking app, this project uses a MongoDB, Express, React, and Node stack.
-                            When a user enters their name, it is stored, and a random word is generated—both are stored
-                            in sessions.
-                            Multiple collections are created to track words, scores/players, and guessed letters. The
-                            guessed letters are cleared out when a new game is started, and once a player
-                            wins, their score is stored in the scores collection.
-                        </p>
-                        <p>
-                            My role in this project was to create the collections and write the routes that would access
-                            the players, scores, and guessed letters. In the original routes file, there was a route
-                            that would take the secret word, iterate through its length, and compare the characters to
-                            the guessed letters. If there was a matching character with a guessed letter, it would
-                            be displayed; if not, a blank space would be added. This was an accessibility issue, so this
-                            route was adapted into a session route to make it more easily accessible.
-                        </p>
-                    </div>
-
-
-                    <!-- Right Section: Image and Key Takeaways -->
-                    <div class="project-details">
-                        <!-- <img src="project-image.png" alt="Project Image"> -->
-                        <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/Hangman.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <h3>Key Takeaways:</h3>
-                        <ul>
-                            <li>Be flexible and open to other members' plans.</li>
-                            <li>When you are not the leading expert on a certain part of the project, speak up and ask
-                                to be taught.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </a>
     </div>
 
 
@@ -255,62 +260,9 @@
     </div>
 
     <!-- Project 4 -->
-    <div class="project" id="project4">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Four%20In%20A%20Row">
-
-            <div class="project-summary-container">
-                <header class="project-header">
-                    <h1>Four In a Row</h1>
-                </header>
-
-                <div class="project-content">
-                    <!-- Left Section: Program Description -->
-                    <div class="program-description">
-                        <h2>Description of How the Program Works</h2>
-                        <p>
-                            <!-- Description -->
-                            This game used a grid of buttons that players could click to place a piece on the board.
-                            Once a player had four pieces
-                            that matched diagonally, laterally, or vertically, they would win. The program used a
-                            boolean to determine which
-                            player was placing a piece and informed the winning player that they had won once their
-                            winning move was performed.
-                            The interesting part about this game was the way we checked for a winning combination. We
-                            would pass in the buttons
-                            that could form a winning combination, and if it returned true, we would find the color and
-                            inform that colored player
-                            that they had won.
-                        </p>
-                        <p>
-                            One issue that arose with this program was that I had incorrectly labeled my UI, which
-                            prevented my checks from determining
-                            if the correct combination requirements had been met. After using many console logs, I
-                            finally found and fixed the problem.
-                        </p>
-                    </div>
-
-
-                    <!-- Right Section: Image and Key Takeaways -->
-                    <div class="project-details">
-                        <!-- <img src="project-image.png" alt="Project Image"> -->
-                        <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/fourinarow.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <h3>Key Takeaways</h3>
-                        <ul>
-                            <li>It's very important to have an organized UI so that the backend can understand what is
-                                happening.</li>
-                            <li>Many operations can be done at once, but they should be isolated for easier debugging.
-                            </li>
-                            <li>Being simple is smart.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </a>
-    </div>
+    <!-- <div class="project" id="project4">
+        
+    </div> -->
 
     <!-- Animation JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

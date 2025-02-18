@@ -5,12 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- <link rel="stylesheet" href="../css/LanguagesAndSkills.css">
-    <link rel="stylesheet" href="../css/projectCard.css"> -->
+
     <link rel="stylesheet" href="./css/projectCard.css">
     <link rel="stylesheet" href="./css/LanguagesAndSkills.css">
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -109,6 +106,9 @@
                         </p>
                         
 
+                        <!-- Language Badges -->
+                        <div class="language-badge" style="background-color: indigo;">C#</div>
+                        <div class="language-badge" style="background-color: orange;">SQL</div>
                     </div>
 
 
@@ -167,6 +167,9 @@
                         </p>
                         
 
+                        <!-- Language Badges -->
+                        <div class="language-badge" style="background-color: indigo;">C#</div>
+                        <div class="language-badge" style="background-color: orange;">SQL</div>
                     </div>
 
 
@@ -225,6 +228,9 @@
                         </p>
                         
 
+                        <!-- Language Badges -->
+                        <div class="language-badge" style="background-color: indigo;">C#</div>
+                        <div class="language-badge" style="background-color: orange;">SQL</div>
                     </div>
 
 
@@ -248,65 +254,11 @@
     </div>
 
     <!-- Project 4 -->
-    <div class="project" id="project4">
-        <a href="https://github.com/Zacharycisney/Portfolio/tree/main/CS3750-Projects/Four%20In%20A%20Row">
-
-            <div class="project-summary-container">
-                <header class="project-header">
-                    <h1>Four In a Row</h1>
-                </header>
-
-                <div class="project-content">
-                    <!-- Left Section: Program Description -->
-                    <div class="program-description">
-                        <h2>Description of How the Program Works</h2>
-                        <p>
-                            <!-- Description -->
-                            This game used a grid of buttons that players could click to place a piece on the board.
-                            Once a player had four pieces
-                            that matched diagonally, laterally, or vertically, they would win. The program used a
-                            boolean to determine which
-                            player was placing a piece and informed the winning player that they had won once their
-                            winning move was performed.
-                            The interesting part about this game was the way we checked for a winning combination. We
-                            would pass in the buttons
-                            that could form a winning combination, and if it returned true, we would find the color and
-                            inform that colored player
-                            that they had won.
-                        </p>
-                        <p>
-                            One issue that arose with this program was that I had incorrectly labeled my UI, which
-                            prevented my checks from determining
-                            if the correct combination requirements had been met. After using many console logs, I
-                            finally found and fixed the problem.
-                        </p>
-                    </div>
-
-
-                    <!-- Right Section: Image and Key Takeaways -->
-                    <div class="project-details">
-                        <!-- <img src="project-image.png" alt="Project Image"> -->
-                        <video width="350" autoplay muted loop controls>
-                            <source src="ProjectVideos/fourinarow.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <h3>Key Takeaways</h3>
-                        <ul>
-                            <li>It's very important to have an organized UI so that the backend can understand what is
-                                happening.</li>
-                            <li>Many operations can be done at once, but they should be isolated for easier debugging.
-                            </li>
-                            <li>Being simple is smart.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </a>
-    </div>
+    <!-- <div class="project" id="project4">
+        
+    </div> -->
 
     <!-- Animation JavaScript -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
     <script src="./js/LanguagesAndSkills.js"></script>
 </body>
 </html>
