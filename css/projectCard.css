@@ -110,3 +110,14 @@
   .language-section button:hover {
     background-color: #1b1b1b; /* Slightly darker for hover effect, optional */
   }
+
+.language-badge {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
