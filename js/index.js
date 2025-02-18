@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to reset spotlight and language link styles
     const resetSpotlight = () => {
-        spotlight.innerHTML = '<h2>Spotlight</h2><p>This section will feature a highlighted skill or project based on the selected language/skill.</p>';
+        spotlight.innerHTML = '<p>Scroll to view projects</p> <p>Vist a specific projects repo on GitHub by clicking the project card</p>';
         spotlight.style.backgroundColor = ''; // Reset background color
         spotlight.style.color = ''; // Reset text color
 
