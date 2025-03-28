@@ -72,39 +72,36 @@
                     <!-- Left Section: Program Description -->
                     <div class="program-description">
                         <h2>Description of How the Program Works</h2>
-                        <p>
-                            <!-- Description -->
-                            This was a final group project that utilizes a database file to access inventory and invoices
-                            for a hypothetical small company. There were three different panels: <code>wndMain</code>, <code>wndSearch</code>, and 
-                            <code>wndItems</code>. The main window links the search and items windows in addition to creating new 
-                            invoices. The search window allows for filtering invoices and selecting an invoice, which then opens
-                            in the <code>wndMain</code> panel. The item window allows users to create, modify, and delete items.
-                        </p>
-                        <p>
-                            This project consisted of myself and two other team members. 
-                            My specific task for this assignment was to implement the <code>wndSearch</code> panel. The three filters 
-                            for searching invoices are based on invoice number, date, and total amount. The
-                            filters can be cleared, or an invoice can be selected and passed back to the main window.
-                        </p>
-                        <p>
-                            The overall implementation of the filters is very simple and repetitive. When any new filter
-                            requirements are provided, they are passed into the <code>clsSearchLogic</code> file, which performs an SQL
-                            query. Any filter that was left blank is not included in the query. Invoice selection is
-                            also straightforward—once an invoice is selected, it can be opened in the main window.
-                        </p>
-                        <h4>Side note on group dynamics</h4>
-                        <p>
-                            This group project was a great lesson in teamwork and communication. All points that were lost
-                            were due to the fact that the pages were not connected and the main page did not display selected
-                            invoices. While I left a large note in the <code>wndSearch.xaml.cs</code> file specifying the code that 
-                            passes the selected invoice, as well as a video walking through the code, I believe that my 
-                            teammate either ran out of time or did not understand the code.
-                        </p>
-                        <p>
-                            This experience taught me that even with clean code and good communication, team dynamics 
-                            can sometimes lead to unexpected outcomes. The best we can do is take it in stride.
-                        </p>
+                        <p> <!-- Description --> 
+                            This was a final group project that utilized a database file to manage inventory and invoices for a hypothetical small company.
+                            The application consisted of three panels: <code>wndMain</code>, <code>wndSearch</code>, and <code>wndItems</code>. The main 
+                            window connects the search and items windows and allows users to create new invoices. The search window enables users to filter
+                            invoices and select an invoice, which then opens in the <code>wndMain</code> panel. The items window allows users to create, 
+                            modify, and delete items. 
+                        </p> 
+                        <p> 
+                            This project was completed by me and two other team members. My specific task was to implement the <code>wndSearch</code> panel.
+                            The three filters for searching invoices were based on invoice number, date, and total amount. Filters could be cleared, and 
+                            users could select an invoice to pass back to the main window. 
+                        </p> 
+                        <p> 
+                            The implementation of the filters was straightforward and repetitive. When new filter parameters were provided, they were passed
+                            into the <code>clsSearchLogic</code> file, which executed an SQL query. Any blank filters were excluded from the query. Invoice
+                            selection was also simple—once an invoice was selected, it opened in the main window. 
+                        </p> 
                         
+                        <h4>Side Note on Group Dynamics</h4> 
+                        
+                        <p> 
+                            This group project was a valuable lesson in teamwork and communication. Points were lost because the pages were not connected, 
+                            and the main page did not display selected invoices. Although I left a detailed note in the <code>wndSearch.xaml.cs</code> 
+                            file explaining the code that passes the selected invoice—along with a video walkthrough—I believe my teammate either ran out
+                            of time or did not fully understand the implementation. 
+                        </p> 
+                        <p>
+                            This experience taught me that even with clean code and clear communication, team dynamics can still lead to unexpected 
+                            challenges. The best we can do is learn from the experience and move forward.
+                        </p>
 
                         <!-- Language Badges -->
                         <div class="language-badge" style="background-color: indigo;">C#</div>
@@ -123,7 +120,8 @@
                         <ul>
                             <li>I learned the power of querying in SQL. Solving front end problems using backend solutions can save time.</li>
                             <li>When you can't pick your teammates you can only do your best.</li>
-                        </ul>
+                        </ul
+                        9>
                     </div>
                 </div>
             </div>
