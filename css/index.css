@@ -7,7 +7,8 @@ body {
 }
 
 
-.welcome-message, .scroll-prompt {
+.welcome-message,
+.scroll-prompt {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -18,7 +19,8 @@ body {
     z-index: 1000;
 }
 
-.welcome-message.fade-out, .scroll-prompt.fade-out {
+.welcome-message.fade-out,
+.scroll-prompt.fade-out {
     opacity: 0;
 }
 
@@ -42,8 +44,8 @@ body {
     align-items: center;
     min-height: 100vh;
 
-    /*visibility: hidden;*/ /* Hide projects by default */
-    opacity: 0; /* Start with opacity 0 */
+    opacity: 0;
+    /* Start with opacity 0 */
     transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
 }
 
@@ -90,7 +92,14 @@ img {
 }
 
 a {
-    text-decoration: none;  /* Remove underline from all links */
-    color: inherit; 
+    text-decoration: none;
+    /* Remove underline from all links */
+    color: inherit;
 }
 
+/*-------------------------------------- Small/Medium Screen Styles ---------------------------------------*/
+@media (max-width: 1050px){
+    .project-details video {
+        display: none; /* Hide video on small screens */
+    }
+}

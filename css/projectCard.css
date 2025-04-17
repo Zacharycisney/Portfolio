@@ -121,3 +121,10 @@
     border-radius: 12px;
     margin-top: 10px;
 }
+
+/*-------------------------------------- Small/Medium Screen Styles ---------------------------------------*/
+@media (max-width: 1050px){
+    .project-details video {
+        display: none; /* Hide video on small screens */
+    }
+}
